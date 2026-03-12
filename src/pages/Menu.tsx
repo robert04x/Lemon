@@ -114,7 +114,7 @@ const menuCategories = {
     },
     {
       ro: 'Carcalete',
-      en: '370 gr.'
+      en: '370 gr.',
       ingredients: 'cârnați 70 gr, brânză 50 gr, 2 ouă, cartofi prăjiți 150 gr',
       price: '21 Lei'
     }
