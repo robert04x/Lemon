@@ -42,7 +42,7 @@ const menuCategories = {
   'Antreuri': [
     {
       ro: 'Omletă simplă / Ouă ochi',
-      en: 'Plain omelette',
+      en: '150gr.',
       ingredients: '3 ouă, sare, piper',
       price: '12 Lei'
     },
