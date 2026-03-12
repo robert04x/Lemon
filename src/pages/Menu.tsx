@@ -17,6 +17,12 @@ const menuCategories = {
       price: '25 Lei'
     },
     {
+      ro: 'Bruschete cu somon',
+      en: 'Smoked Salmon Bruschetta',
+      ingredients: 'Somon fume 100g, lămâie 100g, cremă de brânză 80g, pâine toast 80g, sare 2g (360g)',
+      price: '25 Lei'
+    },
+    {
       ro: 'Bruschete cu prosciutto',
       en: 'Prosciutto Bruschetta',
       ingredients: 'Prosciutto crudo, cremă de brânză, pâine toast (360g)',
