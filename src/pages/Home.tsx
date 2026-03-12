@@ -222,6 +222,7 @@ const Home = () => {
                 </Link>
                 <Link
                   to="/menu"
+                  style="margin-right: -20px; margin-left: 20px;"
                   className="inline-block px-6 py-2 sm:px-8 sm:py-3 bg-gradient-to-r from-yellow-400 to-yellow-500 text-white rounded-full font-semibold hover:from-yellow-500 hover:to-yellow-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-sm sm:text-base"
                 >
                   Rezervă
