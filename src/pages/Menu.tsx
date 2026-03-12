@@ -39,7 +39,25 @@ import { ChevronDown, Grid3X3, List } from 'lucide-react';
 //
 
 const menuCategories = {
-  'Bruschete / Bruschetta': [
+  'Antreuri': [
+    {
+      ro: 'Omletă simplă / Ouă ochi',
+      en: 'Plain omelette',
+      ingredients: '3 ouă, sare, piper',
+      price: '12 Lei'
+    },
+    {
+      ro: 'Omletă țărănească',
+      en: 'Peasant omelette',
+      ingredients: 'ardei kapia 30g, ceapă 30g, bacon 40g, 2 ouă',
+      price: '17 Lei'
+    },
+    {
+      ro: 'Omletă Quesadilla',
+      en: 'Quesadilla omelette',
+      ingredients: '2 ouă, ardei kapia 30g, ceapă 30g, bacon 30g, mozzarella 30g, 1 lipie tortilla',
+      price: '20 Lei'
+    },
     {
       ro: 'Bruschete cu roșii',
       en: 'Tomato Bruschetta',
@@ -75,9 +93,7 @@ const menuCategories = {
       en: 'Bruschetta Mix',
       ingredients: 'bruschete cu roșii 100g, bruschete cu prosciutto 100g, bruschete cu somon 80g, bruschete cu pastă de măsline 80g',
       price: '30 Lei'
-    }
-  ],
-  'Platouri / Platters': [
+    },
     {
       ro: 'Platou de mezeluri italiene',
       en: 'Italian Cold Cuts Platter',
@@ -97,89 +113,14 @@ const menuCategories = {
       price: '100 Lei'
     },
     {
-      ro: 'Platou 2 persoane',
-      en: 'Platter for 2',
-      ingredients: '2 mici, ceafă 200g, cârnați proaspeți 200g, cartofi 150g, murături 100g',
-      price: '90 Lei'
-    },
-    {
-      ro: 'Platou 4 persoane',
-      en: 'Platter for 4',
-      ingredients: 'mici, ceafă 300g, cârnați proaspeți 200g, frigărui pui 200g, pulpă pui 200g, cartofi 300g, murături 150g, mujdei, muștar',
-      price: '180 Lei'
-    },
-    {
-      ro: 'Platoul berarilor',
-      en: 'Beer Lovers Platter',
-      ingredients: 'cartofi 150g, măsline pane 100g, chilli cheese 100g, ceapă pane 50 g, castravete crocant 50g, lipie crispy 50g, 2 sosuri',
-      price: '80 Lei'
-    }
-  ],
-  'Ciorbe / Soups': [
-    { 
-      ro: 'Ciorbă de burtă vită', 
-      en: 'Tripe soup',
-      ingredients: 'burtă vită 100gr, ouă, smântână, usturoi',
-      price: '20 Lei'
-    },
-    { 
-      ro: 'Ciorbă de vacuță', 
-      en: 'Beef soup',
-      ingredients: 'carne de văcuță 80gr, legume, borș',
-      price: '20 Lei'
-    },
-    { 
-      ro: 'Ciorbă de pui a la grec', 
-      en: 'Greek soup with chicken',
-      ingredients: 'piept pui 80 gr, smântână, ouă, mărar, lămâie',
-      price: '20 Lei'
-    },
-    { 
-      ro: 'Ciorbă de perișoare de porc', 
-      en: 'Pork meatball soup',
-      ingredients: 'perișoare 90 gr, legume, borș, ou',
-      price: '17 Lei'
-    },
-    { 
-      ro: 'Supă cremă legume', 
-      en: 'Cream vegetable soup',
-      ingredients: 'cremă cucina, unt, crutoane',
-      price: '17 Lei'
-    },
-    { 
-      ro: 'Ciorbă de pui cu tăiței de casă', 
-      en: 'Chicken soup with homemade noodles',
-      ingredients: 'carne de pui 80gr, tăiței, legume, borș',
-      price: '17 Lei'
-    }
-  ],
-  'Mic dejun / Breakfast': [
-    {
-      ro: 'Omletă simplă / Ouă ochi',
-      en: 'Plain omelette',
-      ingredients: '3 ouă, sare, piper',
-      price: '12 Lei'
-    },
-    {
-      ro: 'Omletă quesadilla',
-      en: 'Quesadilla omelette',
-      ingredients: '2 ouă, ardei kapia 30g, ceapă 30g, bacon 30g, mozzarella 30g, 1 lipie tortilla',
-      price: '20 Lei'
-    },
-    {
-      ro: 'Omletă țărănească',
-      en: 'Peasant omelette',
-      ingredients: 'ardei kapia 30g, ceapă 30g, bacon 40g, 2 ouă',
-      price: '17 Lei'
-    },
-    {
       ro: 'Carcalete',
       ingredients: 'cârnați 70 gr, brânză 50 gr, 2 ouă, cartofi prăjiți 150 gr',
       price: '21 Lei'
     }
   ],
-  'Salate / Salads': [
-    {
+
+  'Salate' : [
+      {
       ro: 'Salată Caesar',
       en: 'Caesar Salad',
       ingredients: 'salată iceberg 200g, sos caesar 60g, piept pui 80g, crutoane 40g, scalie parmezan 20g',
@@ -208,56 +149,49 @@ const menuCategories = {
       en: 'Bulgarian Salad',
       ingredients: 'salată  verde  50g,  roșii  50g,  brânză  50g,  ardei  capia  40g,  ceapă  40g, castravete 40g, ou fiert 50g, măsline 30g, șuncă 50g',
       price: '35 Lei'
-    },
-    {
-      ro: 'Salată varză albă',
-      en: 'White Cabbage Salad',
-      ingredients: 'varză, morcov, mărar',
-      price: '10 Lei'
-    },
-    {
-      ro: 'Salată murături asortate',
-      en: 'Mixed Pickles Salad',
-      ingredients: '',
-      price: '10 Lei'
-    },
-    {
-      ro: 'Salată verde',
-      en: 'Green Salad',
-      ingredients: '',
-      price: '12 Lei'
-    },
-    {
-      ro: 'Salată de ardei copt',
-      en: 'Roasted Pepper Salad',
-      ingredients: 'ardei copt 150g, ulei, usturoi, oțet',
-      price: '10 Lei'
-    },
-    {
-      ro: 'Salată sfeclă',
-      en: 'Beetroot Salad',
-      ingredients: '',
-      price: '10 Lei'
-    },
-    {
-      ro: 'Salată coleslaw',
-      en: 'Coleslaw Salad',
-      ingredients: 'varză albă, morcov, țelină, miere, smântână, maioneză ',
-      price: '10 Lei'
-    },
-    {
-      ro: 'Salată asortată',
-      en: 'Mixed Salad',
-      ingredients: 'roșii, castraveți, ceapă, ardei gras',
-      price: '15 Lei'
-    },
-    {
-      ro: 'Salată roșii',
-      en: 'Tomato Salad',
-      ingredients: '',
-      price: '15 Lei'
     }
   ],
+
+  'Ciorbe / Soups': [
+    { 
+      ro: 'Ciorbă de burtă vită', 
+      en: 'Tripe soup',
+      ingredients: 'burtă vită 100gr, ouă, smântână, usturoi',
+      price: '20 Lei'
+    },
+    { 
+      ro: 'Ciorbă de vacuță', 
+      en: 'Beef soup',
+      ingredients: 'carne de văcuță 80gr, legume, borș',
+      price: '20 Lei'
+    },
+    { 
+      ro: 'Ciorbă de pui a la grec', 
+      en: 'Greek soup with chicken',
+      ingredients: 'piept pui 80 gr, smântână, ouă, mărar, lămâie',
+      price: '20 Lei'
+    },
+    { 
+      ro: 'Ciorbă de perișoare de porc', 
+      en: 'Pork meatball soup',
+      ingredients: 'perișoare 90 gr, legume, borș, ou',
+      price: '17 Lei'
+    },
+    { 
+      ro: 'Ciorbă de pui cu tăiței de casă', 
+      en: 'Chicken soup with homemade noodles',
+      ingredients: 'carne de pui 80gr, tăiței, legume, borș',
+      price: '17 Lei'
+    },
+    { 
+      ro: 'Supă cremă legume', 
+      en: 'Cream vegetable soup',
+      ingredients: 'cremă cucina, unt, crutoane',
+      price: '17 Lei'
+    }
+
+  ],
+
   'Paste / Pasta': [
     {
       ro: 'Paste a la Lemon',
@@ -302,6 +236,28 @@ const menuCategories = {
       price: '45 Lei'
     }
   ],
+
+  'Risotto': [
+    {
+      ro: 'Risotto cu ciuperci',
+      en: 'Mushroom Risotto',
+      ingredients: 'orez arborio 250g, mix ciuperci 100g, cremă cuccina, parmezan, pastă trufe, usturoi',
+      price: '35 Lei'
+    },
+    {
+      ro: 'Risotto cu creveți',
+      en: 'Shrimp Risotto',
+      ingredients: 'orez arborio 250g, creveți 90g, sos pomodorro 70 ml, unt, parmesan',
+      price: '40 Lei'
+    },
+    {
+      ro: 'Risotto primavera',
+      en: 'Primavera Risotto',
+      ingredients: 'orez arborio 250g, legume 200g, usturoi, parmesan, unt',
+      price: '35 Lei'
+    }
+  ],
+
   'Fel principal / Main Course': [
     {
       ro: 'Pastramă de oaie la ceaun cu mămăligă',
@@ -310,28 +266,10 @@ const menuCategories = {
       price: '45 Lei'
     },
     {
-      ro: 'Tigaie picantă de pui și orez',
-      en: 'Spicy Chicken Pan with rice',
-      ingredients: 'piept pui 130g, ceapă 60g, ardei kapia 60g, ardei iute 20g, ciuperci 70g, pomodorro 70ml, sweet chilli 30ml, vin, usturoi 20ml, orez',
-      price: '40 Lei'
-    },
-    {
-      ro: 'Tigaie picantă de porc și orez',
-      en: 'Spicy Pork Pan with rice',
-      ingredients: 'ceafă  porc  130g,  ceapă  60g,  ardei  kapia  60g,  ardei  iute  20g,  ciuperci  70g, pomodorro 70ml, sweet chilli 30ml, vin, usturoi 20 ml, orez',
-      price: '40 Lei'
-    },
-    {
       ro: 'Pomana porcului',
       en: 'Traditional Pork Feast',
       ingredients: 'ceafă porc 200g, mămăligă 200g, murături 100g',
       price: '40 Lei'
-    },
-    {
-      ro: 'Valdostana cu piure',
-      en: 'Valdostana with mashed potatoes',
-      ingredients: 'piept pui 150g, ciuperci 50g, ceapă 30g, cașcaval 50g, șuncă 30g, piure',
-      price: '45 Lei'
     },
     {
       ro: 'Pui gorgonzola',
@@ -346,72 +284,73 @@ const menuCategories = {
       price: '45 Lei'
     },
     {
+      ro: 'Tigaie picantă de porc și orez',
+      en: 'Spicy Pork Pan with rice',
+      ingredients: 'ceafă  porc  130g,  ceapă  60g,  ardei  kapia  60g,  ardei  iute  20g,  ciuperci  70g, pomodorro 70ml, sweet chilli 30ml, vin, usturoi 20 ml, orez',
+      price: '40 Lei'
+    },
+    {
+      ro: 'Tigaie picantă de pui și orez',
+      en: 'Spicy Chicken Pan with rice',
+      ingredients: 'piept pui 130g, ceapă 60g, ardei kapia 60g, ardei iute 20g, ciuperci 70g, pomodorro 70ml, sweet chilli 30ml, vin, usturoi 20ml, orez',
+      price: '40 Lei'
+    }, 
+    {
+      ro: 'Tochitură cu mămăligă, ou și brânză',
+      en: 'Stew with egg and cheese',
+      ingredients: 'tochitură (ceafă porc 100g, kaizer 80g, cârnați 80g, sos roșii, usturoi), ou 50g, mămăligă 150g, brânză 50g',
+      price: '45 Lei'
+    },
+    {
+      ro: 'Ficăței la tigaie',
+      en: 'Fried livers',
+      ingredients: 'ficăței pui 200g, ceapă albă 50g, sos roșii 100g, usturoi, vin 30ml',
+      price: '30 Lei'
+    },
+    {
+      ro: 'Saramură de pui cu mămăligă',
+      en: 'Green Bean Stew with Chicken',
+      ingredients: 'pulpă pui 200g, legume 250g, mămăligă',
+      price: '30 Lei'
+    },
+    {
+      ro: 'Pui gratinat',
+      en: '',
+      ingredients: 'piept pui 200g, crema cuccina 70ml, mozzarella 30g',
+      price: '35 Lei'
+    },
+    {
+      ro: 'Pui la ceaun',
+      en: '',
+      ingredients: 'mujdei, cartofi prăjiți',
+      price: '60 Lei'
+    },
+    {
+      ro: 'Ciolan porc stinko',
+      en: '',
+      ingredients: 'mujdei, cartofi prăjiți',
+      price: '50 Lei'
+    },
+    {
       ro: 'Sarmale în foi de varză și mămăligă',
       en: 'Cabbage Rolls and mamaliga',
       ingredients: 'Carne tocată de vită, orez, ulei, mămăligă, ardei iute (5 buc)',
       price: '30 Lei'
     },
     {
-      ro: 'Fasole iahnie',
-      en: 'Bean Stew',
-      ingredients: '',
-      price: '15 Lei'
+      ro: 'Valdostana cu piure',
+      en: 'Valdostana with mashed potatoes',
+      ingredients: 'piept pui 150g, ciuperci 50g, ceapă 30g, cașcaval 50g, șuncă 30g, piure',
+      price: '45 Lei'
     },
-    {
-      ro: 'Mâncare de fasole verde cu pui',
-      en: 'Green Bean Stew with Chicken',
-      ingredients: 'Fasole verde 5kg, piept de pui 3kg, ceapă 1kg, ardei gras 0.5kg, pastă de tomate 0.5kg, sare 70g, piper 10g, usturoi 100g, mărar verde 3leg, făină 50g',
-      price: '35 Lei'
-    },
-    {
-      ro: 'Varză călită',
-      en: '',
-      ingredients: '',
-      price: '20 Lei'
-    },
-    {
-      ro: 'Ciolan de porc',
-      en: 'Pork Knuckle',
-      ingredients: '',
-      price: '50 Lei'
-    },
-    {
-      ro: 'Tăliată de vită cu sos chimichurri',
-      en: 'Beef Tagliata with Chimichurri Sauce',
-      ingredients: 'Antricot vită 150g, sos chimichurri 100g',
-      price: '55 Lei'
-    },
-    {
-      ro: 'Antricot vită simplu',
-      en: 'Simple Beef Entrecote',
-      ingredients: 'Antricot vită (200g)',
-      price: '50 Lei'
-    }
   ],
-  'Gratar / Grill': [
+
+    'Grătar': [
     {
-      ro: 'Mici',
+      ro: 'Mici grătar',
       en: 'Romanian Meat Rolls',
       ingredients: '',
       price: '6 Lei'
-    },
-    {
-      ro: 'Ceafă porc la grătar',
-      en: 'Pork Neck',
-      ingredients: 'Ceafă de porc 320g, condiment grătar 10g (200g)',
-      price: '25 Lei'
-    },
-    {
-      ro: 'Somon la grătar cu orez',
-      en: 'Grilled salmon with rice',
-      ingredients: 'somon 180g, orez',
-      price: '45 Lei'
-    },
-    {
-      ro: 'Cotlet de porc',
-      en: 'Pork Chop',
-      ingredients: 'Cotlet de porc, condimente grătar (250g)',
-      price: '25 Lei'
     },
     {
       ro: 'Cârnați proaspeți de porc',
@@ -420,21 +359,15 @@ const menuCategories = {
       price: '25 Lei'
     },
     {
-      ro: 'Pulpă pui la grătar',
-      en: 'Grilled Chicken Thigh',
-      ingredients: '',
+      ro: 'Ceafă porc la grătar',
+      en: 'Pork Neck',
+      ingredients: 'Ceafă de porc 320g, condiment grătar 10g (200g)',
       price: '25 Lei'
     },
     {
-      ro: 'Piept pui la grătar',
-      en: 'Grilled Chicken Breast',
-      ingredients: 'Piept pui la grătar (200g)',
-      price: '35 Lei'
-    },
-    {
-      ro: 'Frigărui de pui cu legume',
-      en: 'Chicken Skewers with Vegetables',
-      ingredients: 'piept pui 100g, legume 100g',
+      ro: 'Cotlet la grătar',
+      en: 'Pork Chop',
+      ingredients: 'Cotlet de porc, condimente grătar (250g)',
       price: '25 Lei'
     },
     {
@@ -444,54 +377,84 @@ const menuCategories = {
       price: '25 Lei'
     },
     {
-      ro: 'Pui la jar',
-      en: 'Charcoal Grilled Chicken',
-      ingredients: '½ pui întreg 500g, sare 5g, mămăligă 1 porție, usturoi (mujdei) 50g (600g)',
-      price: '50 Lei'
+      ro: 'Piept pui la grătar',
+      en: 'Grilled Chicken Breast',
+      ingredients: 'Piept pui la grătar (200g)',
+      price: '35 Lei'
     },
     {
-      ro: 'Pastramă de berbecuț',
-      en: 'Lamb Pastrami',
-      ingredients: 'Pastramă de berbec, condimente grătar (180g)',
-      price: '45 Lei'
-    },
-    {
-      ro: 'Cotlet berbecuț',
-      en: 'Lamb Chop',
-      ingredients: 'Cotlet berbecuț (150g)',
-      price: '45 Lei'
-    },
-    {
-      ro: 'Coaste de porc BBQ',
-      en: 'BBQ Pork Ribs',
-      ingredients: 'Coaste de porc 450g, boia dulce 10g, boia iute 10g, zahăr brun 100g, piper 10g, usturoi 5g, sare 5g, miere 100g (650g)',
-      price: '60 Lei'
-    }
-  ],
-  'Aperitive / Appetizers': [
-    {
-      ro: 'Măsline pane',
-      en: 'Fried Olives',
+      ro: 'Pulpă pui la grătar',
+      en: 'Grilled Chicken Thigh',
       ingredients: '',
       price: '25 Lei'
     },
     {
-      ro: 'Meniu quesadilla',
+      ro: 'Frigărui de pui cu legume',
+      en: 'Chicken Skewers with Vegetables',
+      ingredients: 'piept pui 100g, legume 100g',
+      price: '25 Lei'
+    },
+    {
+      ro: 'Somon la grătar cu orez',
+      en: 'Grilled salmon with rice',
+      ingredients: 'somon 180g, orez',
+      price: '45 Lei'
+    },
+    {
+      ro: 'Doradă la grătar',
+      en: '',
+      ingredients: '',
+      price: '40 Lei'
+    },
+    {
+      ro: 'Cârnați măcelărești semiafumați la grătar',
+      en: '',
+      ingredients: '',
+      price: '20 Lei'
+    },
+  ],
+
+
+  'Platouri calde': [
+  
+    {
+      ro: 'Platou 2 persoane',
+      en: 'Platter for 2',
+      ingredients: '2 mici, ceafă 200g, cârnați proaspeți 200g, cartofi 150g, murături 100g',
+      price: '90 Lei'
+    },
+    {
+      ro: 'Platou 4 persoane',
+      en: 'Platter for 4',
+      ingredients: 'mici, ceafă 300g, cârnați proaspeți 200g, frigărui pui 200g, pulpă pui 200g, cartofi 300g, murături 150g, mujdei, muștar',
+      price: '180 Lei'
+    },
+    {
+      ro: 'Platoul berarilor',
+      en: 'Beer Lovers Platter',
+      ingredients: 'cartofi 150g, măsline pane 100g, chilli cheese 100g, ceapă pane 50 g, castravete crocant 50g, lipie crispy 50g, 2 sosuri',
+      price: '80 Lei'
+    }
+  ],
+
+  'Minuturi': [
+    {
+      ro: 'Meniu Quesadilla',
       en: 'Quesadilla Menu',
       ingredients: 'piept  pui  100g,  ardei  gras  60g,  ceapă  40g,  roșie  50g,  mozzarella  50g,  lipie  tortilla, cartofi prăjiți 150gr, sos 90ml',
       price: '40 Lei'
     },
     {
-      ro: 'Aripioare crispy picante',
-      en: 'Spicy Crispy Wings',
-      ingredients: 'Aripioare de pui, ou, făină, ulei, sare (200g)',
-      price: '20 Lei'
+      ro: 'Pui Crispy',
+      en: 'Crispy Chicken',
+      ingredients: 'Piept de pui 300g, ouă 1buc, pesmet 30g, sare 5g, boia dulce 5g, făină 10g (200g)',
+      price: '22 Lei'
     },
     {
-      ro: 'Aripioare BBQ',
-      en: 'BBQ Wings',
-      ingredients: 'Aripioare pui 1200g, ketchup 400ml, usturoi 10g, zahăr brun 100g, piper 5g, muștar 10g, sare 3g',
-      price: '25 Lei'
+      ro: 'Pui Shanghai',
+      en: 'Shanghai chicken',
+      ingredients: 'piept pui 150g, salată coleslaw, ou, muștar, făină',
+      price: '22 Lei'
     },
     {
       ro: 'Șnițel pui cu mix de semințe',
@@ -511,11 +474,12 @@ const menuCategories = {
       ingredients: 'carne porc 150g, salată coleslaw, ou, făină, panko',
       price: '22 Lei'
     },
+
     {
-      ro: 'Pui Crispy',
-      en: 'Crispy Chicken',
-      ingredients: 'Piept de pui 300g, ouă 1buc, pesmet 30g, sare 5g, boia dulce 5g, făină 10g (200g)',
-      price: '20 Lei'
+      ro: 'Șnițel gratinat pui/porc',
+      en: 'Crispy Chicken/pork',
+      ingredients: 'carne 150g, mozzarella 50g, pomodorro 30g',
+      price: '25 Lei'
     },
     {
       ro: 'Cașcaval pane',
@@ -524,11 +488,30 @@ const menuCategories = {
       price: '20 Lei'
     },
     {
-      ro: 'Fructe de mare special',
-      en: 'Special Seafood',
-      ingredients: 'Mix fructe de mare 1p, creveți 50g, lipie grecească 1buc, sare 2g, unt 50g, usturoi 20g, vin alb 40ml, coniac 10ml, sos napoli 80g, roșii cherry 40g',
+      ro: 'Măsline pane',
+      en: 'Fried Olives',
+      ingredients: '',
+      price: '25 Lei'
+    },
+    {
+      ro: 'Chilli Cheese',
+      en: '',
+      ingredients: '',
+      price: '25 Lei'
+    },
+    {
+      ro: 'Fritto misto',
+      en: 'Mixed Fried Seafood',
+      ingredients: 'mix de fructe de mare 200g, cartofi prăjiți 150g, sos',
+      price: '50 Lei'
+    },
+    {
+      ro: 'Creveți Lemon',
+      en: 'Lemon Shrimp',
+      ingredients: 'cozi creveți 150g, sos pomodorro 120ml, unt 50g, roșii cherry 30g, lipie 150g',
       price: '55 Lei'
-    }
+    },
+
   ],
   'Burgeri / Burgers': [
     {
@@ -556,213 +539,14 @@ const menuCategories = {
       price: '30 Lei'
     },
   ],
-  'Peste / Fish': [
+
+  'Pizza': [
     {
-      ro: 'Creveți Lemon',
-      en: 'Lemon Shrimp',
-      ingredients: 'cozi creveți 150g, sos pomodorro 120ml, unt 50g, roșii cherry 30g, lipie 150g',
-      price: '55 Lei'
-    },
-    {
-      ro: 'Creveți în sos de unt',
-      en: 'Shrimp in Butter Sauce',
-      ingredients: 'Creveți 250g, usturoi 20g, verdeață 3g, coniac 10ml, vin alb 20ml, lipie grecească 1buc, roșii cherry 40g, sare 10g, sos napoli 100g, unt 50g',
-      price: '50 Lei'
-    },
-    {
-      ro: 'Dorada regală',
-      en: 'Royal Sea Bream',
-      ingredients: 'Doradă, sare, piper (250g)',
-      price: '40 Lei'
-    },
-    {
-      ro: 'Dorada prăjită',
-      en: 'Fried Sea Bream',
-      ingredients: 'Dorada prăjită 200g, mămăligă 250g, mujdei 40g',
+      ro: 'Pizza Casei',
+      en: 'House Special Pizza',
+      ingredients: 'palină  220g,  sos  pomodorro  100ml,  mozzarella  120g,  cotto  60g,  salam  uscat  60g, ciuperci 60g, măsline 40g, ceapă 30g, jalapenos 30g, bacon 40g',
       price: '42 Lei'
     },
-    {
-      ro: 'Somon la grătar cu orez basmati și sos de unt',
-      en: 'Grilled Salmon with Basmati Rice and Butter Sauce',
-      ingredients: 'Somon, orez basmati, sos de unt, condimente grătar (300g)',
-      price: '50 Lei'
-    },
-    {
-      ro: 'Somon la grătar',
-      en: 'Grilled Salmon',
-      ingredients: 'Somon la grătar (200g)',
-      price: '45 Lei'
-    },
-    {
-      ro: 'Fritto misto',
-      en: 'Mixed Fried Seafood',
-      ingredients: 'mix de fructe de mare 200g, cartofi prăjiți 150g, sos',
-      price: '50 Lei'
-    },
-    {
-      ro: 'File cod cu orez basmati',
-      en: 'Cod Fillet with Basmati Rice',
-      ingredients: 'Cod 150g, orez basmati 100g, sos unt 50ml',
-      price: '45 Lei'
-    },
-    {
-      ro: 'Crap prăjit',
-      en: 'Fried Carp',
-      ingredients: 'Crap prăjit 210g, mămăligă 250g, mujdei 40g',
-      price: '35 Lei'
-    },
-    {
-      ro: 'Saramură de crap',
-      en: 'Carp Saramura',
-      ingredients: 'Peste 210g, roșie 30g, ardei gras 30g, ardei iute, pătrunjel, mămăligă 250g',
-      price: '38 Lei'
-    },
-    {
-      ro: 'Saramură de dorada',
-      en: 'Sea Bream Saramura',
-      ingredients: 'Peste 210g, roșie 30g, ardei gras 30g, ardei iute, pătrunjel, mămăligă 250g',
-      price: '45 Lei'
-    }
-  ],
-  'Garnituri / Side Dishes': [
-    {
-      ro: 'Cartof copt cu unt',
-      en: 'Baked Potato with Butter',
-      ingredients: '',
-      price: '13 Lei'
-    },
-    {
-      ro: 'Cartofi la cuptor',
-      en: 'Oven Potatoes',
-      ingredients: 'Cartofi 10kg, usturoi 100g, rozmarin 50g, ulei 200ml, vin alb de gătit 400ml, sare 40g, piper 20g, apă 3L',
-      price: '15 Lei'
-    },
-    {
-      ro: 'Mămăligă',
-      en: 'Polenta',
-      ingredients: '',
-      price: '7 Lei'
-    },
-    {
-      ro: 'Legume la grătar',
-      en: 'Grilled Vegetables',
-      ingredients: 'dovlecel, vânătă, ceapă, ardei, ciuperci',
-      price: '15 Lei'
-    },
-    {
-      ro: 'Piure de cartofi',
-      en: 'Mashed Potatoes',
-      ingredients: '',
-      price: '10 Lei'
-    },
-    {
-      ro: 'Piure cu trufe',
-      en: 'Truffle Mashed Potatoes',
-      ingredients: '',
-      price: '15 Lei'
-    },
-    {
-      ro: 'Cartofi prăjiți',
-      en: 'French Fries',
-      ingredients: 'Cartofi, ulei, sare (150g)',
-      price: '10 Lei'
-    },
-    {
-      ro: 'Cartofi prăjiți cu brânză',
-      en: 'French Fries with Cheese',
-      ingredients: '',
-      price: '13 Lei'
-    },
-    {
-      ro: 'Cartofi prăjiți cu parmezan și usturoi',
-      en: 'French Fries with Parmesan and Garlic',
-      ingredients: '',
-      price: '14 Lei'
-    },
-    {
-      ro: 'Orez cu legume',
-      en: 'Rice with Vegetables',
-      ingredients: 'orez 150g, ceapă 20g, dovlecel 20g, ardei kapia 20g, unt 10g, pătrunjel 5g, sare 2g',
-      price: '12 Lei'
-    },
-    {
-      ro: 'Orez cu unt',
-      en: 'Rice with Butter',
-      ingredients: '',
-      price: '12 Lei'
-    }
-
-  ],
-  'Sosuri / Sauces': [
-    {
-      ro: 'Cremă usturoi',
-      en: 'Garlic Cream',
-      ingredients: 'maioneză, usturoi',
-      price: '5 Lei'
-    },
-    {
-      ro: 'Sweet Chilli',
-      en: '',
-      ingredients: '',
-      price: '5 Lei'
-    },
-    {
-      ro: 'Mujdei usturoi',
-      en: '',
-      ingredients: '',
-      price: '5 Lei'
-    },
-
-    {
-      ro: 'Topping parmezan',
-      en: '',
-      ingredients: '',
-      price: '5 Lei'
-    },
-    {
-      ro: 'Muștar',
-      en: '',
-      ingredients: '',
-      price: '3 Lei'
-    },
-    {
-      ro: 'Sos BBQ',
-      en: 'BBQ Sauce',
-      ingredients: 'Sos BBQ (80g)',
-      price: '5 Lei'
-    },
-    {
-      ro: 'Sosul casei',
-      en: 'House Sauce',
-      ingredients: 'Sosul casei (80g)',
-      price: '5 Lei'
-    },
-    {
-      ro: 'Sos Pomodorro',
-      en: 'Pomodoro Sauce',
-      ingredients: '',
-      price: '5 Lei'
-    },
-    {
-      ro: 'Maioneză',
-      en: 'Mayonnaise',
-      ingredients: '',
-      price: '5 Lei'
-    },
-    {
-      ro: 'Maioneză picantă',
-      en: 'Spicy Mayonnaise',
-      ingredients: '',
-      price: '5 Lei'
-    },
-    {
-      ro: 'Sos Tzatziki',
-      en: 'Tzatziki Sauce',
-      ingredients: 'Castraveți 250g, iaurt grecesc 500g, usturoi 50g, sare 20g, piper 10g, zeamă de lămâie 10ml (90g)',
-      price: '8 Lei'
-    }
-  ],
-  'Pizza': [
     {
       ro: 'Margherita',
       en: 'Margherita',
@@ -823,22 +607,10 @@ const menuCategories = {
       ingredients: 'palină 220g, sos pomodorro 100ml, mozzarella 120g, piept pui 80g, ciuperci 60 g, parmezan',
       price: '40 Lei'
     },
-//    {
-//      ro: 'Veghi',
-//      en: 'Vegetarian',
-//      ingredients: 'Sos de roșii 70g, cu/fără mozzarella 120g, ciuperci 70g, tofu 50g, măsline 30g, carcioffi 50g, roșii cherry 30g, rucola 30g',
-//      price: '30 Lei'
-//    },
     {
       ro: 'Tonno e cipolla',
       en: 'Tuna and Onion',
       ingredients: 'palină 220g, sos pomodorro 100ml, mozzarella 120g, ton conservă 80g, ceapă roșie 30g, măsline 50g',
-      price: '42 Lei'
-    },
-    {
-      ro: 'Pizza Casei',
-      en: 'House Special Pizza',
-      ingredients: 'palină  220g,  sos  pomodorro  100ml,  mozzarella  120g,  cotto  60g,  salam  uscat  60g, ciuperci 60g, măsline 40g, ceapă 30g, jalapenos 30g, bacon 40g',
       price: '42 Lei'
     },
     {
@@ -848,8 +620,180 @@ const menuCategories = {
       price: '42 Lei'
     }
   ],
-  'Focaccia': [
+
+    'Garnituri / Side Dishes': [
     {
+      ro: 'Cartofi prăjiți',
+      en: 'French Fries',
+      ingredients: 'Cartofi, ulei, sare (150g)',
+      price: '10 Lei'
+    },
+    {
+      ro: 'Cartofi prăjiți cu brânză',
+      en: 'French Fries with Cheese',
+      ingredients: '',
+      price: '13 Lei'
+    },
+    {
+      ro: 'Cartofi prăjiți cu parmezan și usturoi',
+      en: 'French Fries with Parmesan and Garlic',
+      ingredients: '',
+      price: '14 Lei'
+    },
+    {
+      ro: 'Cartof copt cu unt',
+      en: 'Baked Potato with Butter',
+      ingredients: '',
+      price: '13 Lei'
+    },
+    {
+      ro: 'Piure de cartofi',
+      en: 'Mashed Potatoes',
+      ingredients: '',
+      price: '10 Lei'
+    },
+    {
+      ro: 'Piure cu trufe',
+      en: 'Truffle Mashed Potatoes',
+      ingredients: '',
+      price: '15 Lei'
+    },
+    {
+      ro: 'Varză călită',
+      en: '',
+      ingredients: '',
+      price: '20 Lei'
+    },
+    {
+      ro: 'Fasole iahnie',
+      en: 'Bean Stew',
+      ingredients: '',
+      price: '15 Lei'
+    },
+    {
+      ro: 'Legume la grătar',
+      en: 'Grilled Vegetables',
+      ingredients: 'dovlecel, vânătă, ceapă, ardei, ciuperci',
+      price: '15 Lei'
+    },
+    {
+      ro: 'Orez cu legume',
+      en: 'Rice with Vegetables',
+      ingredients: 'orez 150g, ceapă 20g, dovlecel 20g, ardei kapia 20g, unt 10g, pătrunjel 5g, sare 2g',
+      price: '12 Lei'
+    },
+    {
+      ro: 'Orez cu unt',
+      en: 'Rice with Butter',
+      ingredients: '',
+      price: '12 Lei'
+    },
+    {
+      ro: 'Mămăligă',
+      en: 'Polenta',
+      ingredients: '',
+      price: '7 Lei'
+    },
+  ],
+
+'Salate însoțire': [
+    {
+      ro: 'Salată asortată',
+      en: 'Mixed Salad',
+      ingredients: 'roșii, castraveți, ceapă, ardei gras',
+      price: '15 Lei'
+    },
+    {
+      ro: 'Salată roșii',
+      en: 'Tomato Salad',
+      ingredients: '',
+      price: '15 Lei'
+    },
+    {
+      ro: 'Salată asortată murături',
+      en: 'Mixed Pickles Salad',
+      ingredients: '',
+      price: '10 Lei'
+    },
+    {
+      ro: 'Salată varză albă',
+      en: 'White Cabbage Salad',
+      ingredients: 'varză, morcov, mărar',
+      price: '10 Lei'
+    },
+    {
+      ro: 'Salată coleslaw',
+      en: 'Coleslaw Salad',
+      ingredients: 'varză albă, morcov, țelină, miere, smântână, maioneză ',
+      price: '10 Lei'
+    },
+    {
+      ro: 'Salată de ardei copt',
+      en: 'Roasted Pepper Salad',
+      ingredients: 'ardei copt 150g, ulei, usturoi, oțet',
+      price: '10 Lei'
+    },
+    {
+      ro: 'Salată sfeclă',
+      en: 'Beetroot Salad',
+      ingredients: '',
+      price: '10 Lei'
+    },
+    {
+      ro: 'Salată verde',
+      en: 'Green Salad',
+      ingredients: '',
+      price: '12 Lei'
+    }
+],
+
+  'Deserturi / Desserts': [
+    {
+      ro: 'Tort Tiramisu',
+      en: 'Tiramisu',
+      ingredients: '',
+      price: '22 Lei'
+    },
+    {
+      ro: 'Papanași cu dulceață afine/vișine/ciocolată',
+      en: 'Papanași with Jam',
+      ingredients: 'brânză vaci, ou, făină, zahăr, bicarbonat, smântână ',
+      price: '22 Lei'
+    },
+    {
+      ro: 'Lava cake cu înghețată',
+      en: 'Lava Cake with Ice Cream',
+      ingredients: 'ciocolată, unt, ou, făină, zahăr',
+      price: '25 Lei'
+    },
+    {
+      ro: 'Desertul bucătarului',
+      en: 'Chef\'s Dessert',
+      ingredients: 'clătite, frișcă, mascarpone, zahăr, arome, finetti, înghețată, fructe',
+      price: '20 Lei'
+    },
+    {
+      ro: 'Clătite ',
+      en: 'Crêpes',
+      ingredients: 'lapte, ou, făină, arome',
+      price: '20 Lei'
+    },
+    {
+      ro: 'Cheesecake Lemon',
+      en: 'Lemon Cheese Cake',
+      ingredients: 'biscuiți, unt, mascarpone, frișcă, jeleu, arome',
+      price: '25 Lei'
+    },
+    {
+      ro: 'Înghețată diverse sortimente',
+      en: 'Ice Cream',
+      ingredients: '',
+      price: '15 lei'
+    }
+  ],
+
+  'Extra': [
+      {
       ro: 'Focaccia simplă',
       en: 'Plain Focaccia',
       ingredients: '',
@@ -872,55 +816,84 @@ const menuCategories = {
       en: 'Bread',
       ingredients: '',
       price: '3 Lei'
-    }
-  ],
-  'Deserturi / Desserts': [
+    },
     {
-      ro: 'Tort Tiramisu',
-      en: 'Tiramisu',
+      ro: 'Cremă usturoi',
+      en: 'Garlic Cream',
+      ingredients: 'maioneză, usturoi',
+      price: '5 Lei'
+    },
+    {
+      ro: 'Sweet Chilli',
+      en: '',
       ingredients: '',
-      price: '22 Lei'
+      price: '5 Lei'
     },
     {
-      ro: 'Cheesecake Lemon',
-      en: 'Lemon Cheese Cake',
-      ingredients: 'biscuiți, unt, mascarpone, frișcă, jeleu, arome',
-      price: '25 Lei'
-    },
-    {
-      ro: 'Desertul bucătarului',
-      en: 'Chef\'s Dessert',
-      ingredients: 'clătite, frișcă, mascarpone, zahăr, arome, finetti, înghețată, fructe',
-      price: '20 Lei'
-    },
-    {
-      ro: 'Înghețată diverse sortimente',
-      en: 'Ice Cream',
+      ro: 'Mujdei usturoi',
+      en: '',
       ingredients: '',
-      price: '15 lei'
+      price: '5 Lei'
     },
     {
-      ro: 'Papanași cu dulceață afine/vișine/ciocolată',
-      en: 'Papanași with Jam',
-      ingredients: 'brânză vaci, ou, făină, zahăr, bicarbonat, smântână ',
-      price: '22 Lei'
+      ro: 'Muștar',
+      en: '',
+      ingredients: '',
+      price: '3 Lei'
     },
     {
-      ro: 'Clătite ',
-      en: 'Crêpes',
-      ingredients: 'lapte, ou, făină, arome',
-      price: '20 Lei'
+      ro: 'Sosul casei',
+      en: 'House Sauce',
+      ingredients: 'Sosul casei (80g)',
+      price: '5 Lei'
     },
     {
-      ro: 'Lava cake cu înghețată',
-      en: 'Lava Cake with Ice Cream',
-      ingredients: 'ciocolată, unt, ou, făină, zahăr',
-      price: '25 Lei'
-    }
+      ro: 'Sos Pomodorro',
+      en: 'Pomodoro Sauce',
+      ingredients: '',
+      price: '5 Lei'
+    },
+    {
+      ro: 'Maioneză',
+      en: 'Mayonnaise',
+      ingredients: '',
+      price: '5 Lei'
+    },
+    {
+      ro: 'Maioneză picantă',
+      en: 'Spicy Mayonnaise',
+      ingredients: '',
+      price: '5 Lei'
+    },
+    {
+      ro: 'Smântână',
+      en: '',
+      ingredients: '',
+      price: '5 Lei'
+    },
+    {
+      ro: 'Topping parmezan',
+      en: '',
+      ingredients: '',
+      price: '5 Lei'
+    },
+    {
+      ro: 'Ardei iute',
+      en: '',
+      ingredients: '',
+      price: '3 Lei'
+    },
+    {
+      ro: 'Pachet',
+      en: '',
+      ingredients: '',
+      price: '2 Lei'
+    },
   ],
-  'Băuturi alcoolice / Alcoholic Beverages': [
+
+  'Whisky': [
     {
-      ro: 'Whisky Chivas Regal 12 ani',
+      ro: 'Chivas Regal 12 ani',
       en: 'Chivas Regal 12 Years Whisky',
       ingredients: '40ml',
       price: '15 Lei'
@@ -949,6 +922,10 @@ const menuCategories = {
       ingredients: '40ml',
       price: '15 Lei'
     },
+  ],
+
+  'Rom': [
+
     {
       ro: 'Rom Havana Club 3 ani',
       en: 'Havana Club 3 Years Rum',
@@ -967,6 +944,9 @@ const menuCategories = {
       ingredients: '40ml',
       price: '15 Lei'
     },
+  ],
+
+  'Vodka': [
     {
       ro: 'Vodka Absolut',
       en: 'Absolut Vodka',
@@ -985,42 +965,9 @@ const menuCategories = {
       ingredients: '40ml',
       price: '25 Lei'
     },
-    {
-      ro: 'De Kuyper Peachtree',
-      en: 'De Kuyper Peachtree',
-      ingredients: '40ml',
-      price: '12 Lei'
-    },
-    {
-      ro: 'Tequila Olmeca Altos Blanco',
-      en: 'Olmeca Altos Blanco Tequila',
-      ingredients: '40ml',
-      price: '15 Lei'
-    },
-    {
-      ro: 'Olmeca Altos Reposado',
-      en: 'Olmeca Altos Reposado',
-      ingredients: '40ml',
-      price: '15 Lei'
-    },
-    {
-      ro: 'Tradiționale Vișinată',
-      en: 'Traditional Cherry Brandy',
-      ingredients: '40ml',
-      price: '15 Lei'
-    },
-    {
-      ro: 'Afinată',
-      en: 'Blueberry Brandy',
-      ingredients: '40ml',
-      price: '15 Lei'
-    },
-    {
-      ro: 'Pălincă de Prune',
-      en: 'Plum Brandy',
-      ingredients: '40ml',
-      price: '15 Lei'
-    },
+  ],
+
+  'Liquor': [
     {
       ro: 'Liquor Carolans Irish Cream',
       en: 'Carolans Irish Cream',
@@ -1058,11 +1005,52 @@ const menuCategories = {
       price: '12 Lei'
     },
     {
-      ro: 'Gin Malfy Aranciata',
-      en: 'Malfy Aranciata Gin',
+      ro: 'De Kuyper Peachtree',
+      en: 'De Kuyper Peachtree',
       ingredients: '40ml',
-      price: '20 Lei'
+      price: '12 Lei'
     },
+  ],
+
+  'Tequila': [
+    {
+      ro: 'Olmeca Altos Blanco',
+      en: '',
+      ingredients: '40ml',
+      price: '15 Lei'
+    },
+    {
+      ro: 'Olmeca Altos Reposado',
+      en: 'Olmeca Altos Reposado',
+      ingredients: '40ml',
+      price: '15 Lei'
+    },
+  ],
+
+  'Tradiționale': [
+
+    {
+      ro: 'Tradiționale Vișinată',
+      en: 'Traditional Cherry Brandy',
+      ingredients: '40ml',
+      price: '15 Lei'
+    },
+    {
+      ro: 'Afinată',
+      en: 'Blueberry Brandy',
+      ingredients: '40ml',
+      price: '15 Lei'
+    },
+    {
+      ro: 'Pălincă de Prune',
+      en: 'Plum Brandy',
+      ingredients: '40ml',
+      price: '15 Lei'
+    },
+  ],
+
+  'Gin & Tonic': [
+
     {
       ro: 'Malfy Rosa',
       en: 'Malfy Rosa Gin',
@@ -1087,18 +1075,25 @@ const menuCategories = {
       ingredients: '40ml',
       price: '10 Lei'
     },
+  ],
+
+  'Vermouth': [  
     {
-      ro: 'Vermouth St. Petroni Blanco',
-      en: 'St. Petroni Blanco Vermouth',
+      ro: 'St. Petroni Blanco',
+      en: '',
       ingredients: '40ml',
       price: '15 Lei'
     },
     {
       ro: 'St. Petroni Rojo',
-      en: 'St. Petroni Rojo Vermouth',
+      en: '',
       ingredients: '40ml',
       price: '15 Lei'
     },
+  ],
+
+   'Cognac': [  
+
     {
       ro: 'Cognac Ararat 5 Ani',
       en: 'Ararat 5 Years Cognac',
@@ -1112,7 +1107,30 @@ const menuCategories = {
       price: '25 Lei'
     }
   ],
-  'Cocktailuri / Cocktails': [
+
+   'Cocktailuri': [  
+
+    {
+      ro: 'Hugo',
+      en: '',
+      ingredients: 'Lime, mentă, prosecco, sirop de soc, apă minerală (250ml)',
+      price: '8 Lei'
+    },
+    {
+      ro: 'Cuba Libre',
+      en: '',
+      ingredients: 'Havana Club 3 ani, Coca Cola, lime, gheață',
+      price: '12 Lei'
+    },
+    {
+      ro: 'Aperol Spritz',
+      en: '',
+      ingredients: 'St. Petroni Aperitivo, prosecco, apă minerală',
+      price: '14 Lei'
+    }
+  ],
+
+  'Limonade & Fresh': [
     {
       ro: 'Limonadă clasică',
       en: 'Classic Lemonade',
@@ -1136,29 +1154,12 @@ const menuCategories = {
       en: 'Raspberry Lemonade',
       ingredients: 'Limonadă cu zmeură (200ml)',
       price: '15 Lei'
-    },
-    {
-      ro: 'Hugo',
-      en: 'Hugo',
-      ingredients: 'Lime, mentă, prosecco, sirop de soc, apă minerală (250ml)',
-      price: '8 Lei'
-    },
-    {
-      ro: 'Cuba Libre',
-      en: 'Cuba Libre',
-      ingredients: 'Havana Club 3 ani, Coca Cola, lime, gheață (250ml)',
-      price: '12 Lei'
-    },
-    {
-      ro: 'Aperitivo Spritz',
-      en: 'Aperitivo Spritz',
-      ingredients: 'St. Petroni Aperitivo, prosecco, apă minerală (250ml)',
-      price: '14 Lei'
     }
   ],
-  'Vinuri / Wines': [
+
+  'Vinuri Roșii': [
     {
-      ro: 'Vinuri Roșii - Cuvee Uberland',
+      ro: 'Cuvee Uberland',
       en: 'Red Wines - Cuvee Uberland',
       ingredients: '0.75L',
       price: '200 Lei'
@@ -1182,44 +1183,48 @@ const menuCategories = {
       price: '110 Lei'
     },
     {
-      ro: 'Nocturne Roșu',
-      en: 'Nocturne Red',
+      ro: 'Nocturne',
+      en: 'Nocturne',
       ingredients: '0.75L',
       price: '100 Lei'
     },
     {
-      ro: 'Arrogance Roșu',
-      en: 'Arrogance Red',
+      ro: 'Arrogance',
+      en: 'Arrogance',
       ingredients: '0.75L',
       price: '110 Lei'
     },
     {
-      ro: 'La Plage Roșu',
-      en: 'La Plage Red',
+      ro: 'La Plage',
+      en: 'La Plage',
       ingredients: '0.75L',
       price: '75 Lei'
     },
+  ],
+
+   'Vinuri Albe': [
+
     {
-      ro: 'Vinuri Albe - Solo Quinta',
-      en: 'White Wines - Solo Quinta',
+      ro: 'Solo Quinta',
+      en: 'Solo Quinta',
       ingredients: '0.75L',
       price: '200 Lei'
     },
     {
-      ro: 'Nocturne Alb',
-      en: 'Nocturne White',
+      ro: 'Nocturne',
+      en: 'Nocturne',
       ingredients: '0.75L',
       price: '100 Lei'
     },
     {
-      ro: 'Caii de la Letea Vol. II Alb',
-      en: 'Caii de la Letea Vol. II White',
+      ro: 'Caii de la Letea Vol. II',
+      en: 'Caii de la Letea Vol. II',
       ingredients: '0.75L',
       price: '100 Lei'
     },
     {
-      ro: 'Liliac Alb',
-      en: 'Liliac White',
+      ro: 'Liliac',
+      en: 'Liliac',
       ingredients: '0.75L',
       price: '100 Lei'
     },
@@ -1230,8 +1235,8 @@ const menuCategories = {
       price: '90 Lei'
     },
     {
-      ro: 'Arrogance Alb',
-      en: 'Arrogance White',
+      ro: 'Arrogance',
+      en: 'Arrogance',
       ingredients: '0.75L',
       price: '110 Lei'
     },
@@ -1248,14 +1253,18 @@ const menuCategories = {
       price: '100 Lei'
     },
     {
-      ro: 'La Plage Alb',
-      en: 'La Plage White',
+      ro: 'La Plage',
+      en: 'La Plage',
       ingredients: '0.75L',
       price: '75 Lei'
     },
+  ],
+
+   'Vinuri Roze': [
+
     {
-      ro: 'Vinuri Roze - Solo Quinta Roze',
-      en: 'Rosé Wines - Solo Quinta Rosé',
+      ro: 'Solo Quinta',
+      en: 'Solo Quinta',
       ingredients: '0.75L',
       price: '200 Lei'
     },
@@ -1272,8 +1281,8 @@ const menuCategories = {
       price: '90 Lei'
     },
     {
-      ro: 'Arrogance Roze',
-      en: 'Arrogance Rosé',
+      ro: 'Arrogance',
+      en: 'Arrogance',
       ingredients: '0.75L',
       price: '110 Lei'
     },
@@ -1284,17 +1293,20 @@ const menuCategories = {
       price: '100 Lei'
     },
     {
-      ro: 'Nocturne Roze',
-      en: 'Nocturne Rosé',
+      ro: 'Nocturne',
+      en: 'Nocturne',
       ingredients: '0.75L',
       price: '200 Lei'
     },
     {
-      ro: 'Caii de la Letea Volumul II Roze',
-      en: 'Caii de la Letea Volume II Rosé',
+      ro: 'Caii de la Letea Volumul II',
+      en: 'Caii de la Letea Volume II',
       ingredients: '0.75L',
       price: '110 Lei'
     },
+  ],
+
+   'Șampanie / Prosecco': [
     {
       ro: 'Prince Laurent',
       en: 'Prince Laurent',
@@ -1302,8 +1314,8 @@ const menuCategories = {
       price: '250 Lei'
     },
     {
-      ro: 'Cuvee de Purcari Alb',
-      en: 'Cuvee de Purcari White',
+      ro: 'Cuvee de Purcari',
+      en: 'Cuvee de Purcari',
       ingredients: '0.75L',
       price: '250 Lei'
     },
@@ -1358,7 +1370,7 @@ const menuCategories = {
       price: '13 Lei'
     }
   ],
-  'Băuturi răcoritoare / Soft Drinks': [
+  'Soft Drinks': [
     {
       ro: '7-Up',
       en: '7-Up',
@@ -1405,7 +1417,7 @@ const menuCategories = {
       ro: 'Bucovina Apă Plată',
       en: 'Bucovina Still Water',
       ingredients: '0.33L / 0.70L',
-      price: '7 Lei / 11 Lei'
+      price: '7 Lei / 10 Lei'
     },
     {
       ro: 'Bucovina Apă Minerală',
