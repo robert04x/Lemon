@@ -214,7 +214,7 @@ const Home = () => {
                 transition={{ delay: 1.3, duration: 0.8 }}
                 className="pt-4"
               >
-              <div className="flex gap-5">
+              <div className="flex justify-center gap-5">
                 <Link
                   to="/menu"
                   className="inline-block px-6 py-2 sm:px-8 sm:py-3 bg-gradient-to-r from-yellow-400 to-yellow-500 text-white rounded-full font-semibold hover:from-yellow-500 hover:to-yellow-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-sm sm:text-base"
