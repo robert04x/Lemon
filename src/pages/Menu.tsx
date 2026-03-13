@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, Grid3X3, List } from 'lucide-react';
 
@@ -1599,6 +1599,14 @@ const MenuItem = ({ item, index }: { item: { ro: string; en: string; ingredients
 const Menu = () => {
   const [selectedCategory, setSelectedCategory] = useState(Object.keys(menuCategories)[0]);
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const menuItemsRef = useRef<HTMLDivElement>(null);
+
+  const handleCategoryClick = (category: string) => {
+    setSelectedCategory(category);
+    if (viewMode === 'grid' && menuItemsRef.current) {
+      menuItemsRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
 
   return (
     <div className="min-h-screen pt-16 px-2 pb-16 sm:px-4">
@@ -1643,7 +1651,7 @@ const Menu = () => {
               {Object.keys(menuCategories).map((category) => (
                 <button
                   key={category}
-                  onClick={() => setSelectedCategory(category)}
+                  onClick={() => handleCategoryClick(category)}
                   className={`p-3 rounded-lg text-sm font-medium transition-all duration-200 text-left ${
                     selectedCategory === category
                       ? 'bg-yellow-400 text-white shadow-lg scale-105'
@@ -1660,56 +1668,90 @@ const Menu = () => {
               ))}
             </div>
           ) : (
-            /* List view for categories */
+            /* List view for categories - each category is a dropdown with items inside */
             <div className="space-y-1">
-              {Object.keys(menuCategories).map((category) => (
-                <button
-                  key={category}
-                  onClick={() => setSelectedCategory(category)}
-                  className={`w-full p-3 rounded-lg text-sm font-medium transition-all duration-200 text-left flex justify-between items-center ${
-                    selectedCategory === category
-                      ? 'bg-yellow-400 text-white shadow-lg'
-                      : 'bg-white text-gray-700 hover:bg-yellow-50 shadow-sm'
-                  }`}
-                >
-                  <span>{category}</span>
-                  <span className="text-xs opacity-75">
-                    {menuCategories[category as keyof typeof menuCategories].length}
-                  </span>
-                </button>
-              ))}
+              {Object.keys(menuCategories).map((category) => {
+                const isOpen = selectedCategory === category;
+                return (
+                  <div key={category} className="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <button
+                      onClick={() => setSelectedCategory(category)}
+                      className={`w-full p-3 text-sm font-medium transition-all duration-200 text-left flex justify-between items-center ${
+                        isOpen
+                          ? 'bg-yellow-400 text-white shadow-lg'
+                          : 'bg-white text-gray-700 hover:bg-yellow-50 shadow-sm'
+                      }`}
+                    >
+                      <span>{category}</span>
+                      <div className="flex items-center gap-2">
+                        <span className="text-xs opacity-75">
+                          {menuCategories[category as keyof typeof menuCategories].length}
+                        </span>
+                        <ChevronDown 
+                          size={16}
+                          className={`transition-transform ${isOpen ? 'rotate-180' : ''}`}
+                        />
+                      </div>
+                    </button>
+                    
+                    <AnimatePresence>
+                      {isOpen && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.2 }}
+                          className="overflow-hidden"
+                        >
+                          <div className="p-2 bg-gray-50">
+                            {menuCategories[category as keyof typeof menuCategories].map((item, index) => (
+                              <MenuItem 
+                                key={item.ro} 
+                                item={item} 
+                                index={index}
+                              />
+                            ))}
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                );
+              })}
             </div>
           )}
         </div>
 
-        {/* Menu items */}
-        <div className="relative">
-          <div className="mb-4 p-3 bg-yellow-50 rounded-lg border-l-4 border-yellow-400">
-            <h3 className="font-semibold text-gray-800 mb-1">{selectedCategory}</h3>
-            <p className="text-sm text-gray-600">
-              {menuCategories[selectedCategory as keyof typeof menuCategories].length} preparate disponibile
-            </p>
+        {/* Menu items - only shown in grid view */}
+        {viewMode === 'grid' && (
+          <div className="relative" ref={menuItemsRef}>
+            <div className="mb-4 p-3 bg-yellow-50 rounded-lg border-l-4 border-yellow-400">
+              <h3 className="font-semibold text-gray-800 mb-1">{selectedCategory}</h3>
+              <p className="text-sm text-gray-600">
+                {menuCategories[selectedCategory as keyof typeof menuCategories].length} preparate disponibile
+              </p>
+            </div>
+            
+            <AnimatePresence mode="wait">
+              <motion.div 
+                key={selectedCategory}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.2 }}
+                className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3"
+              >
+                {menuCategories[selectedCategory as keyof typeof menuCategories].map((item, index) => (
+                  <MenuItem 
+                    key={item.ro} 
+                    item={item} 
+                    index={index}
+                  />
+                ))}
+              </motion.div>
+            </AnimatePresence>
           </div>
-          
-          <AnimatePresence mode="wait">
-            <motion.div 
-              key={selectedCategory}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.2 }}
-              className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3"
-            >
-              {menuCategories[selectedCategory as keyof typeof menuCategories].map((item, index) => (
-                <MenuItem 
-                  key={item.ro} 
-                  item={item} 
-                  index={index}
-                />
-              ))}
-            </motion.div>
-          </AnimatePresence>
-        </div>
+        )}
       </div>
       
       {/* Bottom fade effect */}
@@ -1719,4 +1761,3 @@ const Menu = () => {
 }
 
 export default Menu;
-
