@@ -1599,7 +1599,7 @@ const MenuItem = ({ item, index }: { item: { ro: string; en: string; ingredients
 
 const Menu = () => {
   const [selectedCategory, setSelectedCategory] = useState(Object.keys(menuCategories)[0]);
-  const categoryRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
+  const contentRef = useRef<HTMLDivElement | null>(null);
 
   return (
     <div className="min-h-screen pt-20 px-4 pb-16">
@@ -1621,13 +1621,11 @@ const Menu = () => {
               onClick={() => {
                 setSelectedCategory(category);
                 
-                // Small delay to allow state update and DOM render
-                setTimeout(() => {
-                  categoryRefs.current[category]?.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start"
-                  });
-                }, 100);
+                // Scroll to the content area
+                contentRef.current?.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start"
+                });
               }}
               className={`px-6 py-2 rounded-full transition-all duration-200 ${
                 selectedCategory === category
@@ -1640,13 +1638,10 @@ const Menu = () => {
           ))}
         </div>
         
-        <div className="relative mb-20">
+        <div ref={contentRef} className="relative mb-20 scroll-mt-24">
           <AnimatePresence mode="wait">
             <motion.div 
               key={selectedCategory}
-              ref={(el) => {
-                categoryRefs.current[selectedCategory] = el;
-              }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
