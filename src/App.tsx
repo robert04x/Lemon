@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
-import Menu from './pages/Menu.tsx';
+import Menu from './pages/Menu';
 import { Diamond as Lemon } from 'lucide-react';
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/menu.tsx" element={<Menu />} />
+          <Route path="/menu" element={<Menu />} />
         </Routes>
       </div>
     </Router>
