@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, Grid3X3, List } from 'lucide-react';
+import { useRef } from 'react';
 
 // Negăsite aici :
 // Risotto cu ciuperci, Mushroom Risotto, orez arborio 250g, mix ciuperci 100g, cremă cuccina, parmezan, pastă trufe, usturoi, 35 lei
@@ -1598,6 +1599,7 @@ const MenuItem = ({ item, index }: { item: { ro: string; en: string; ingredients
 
 const Menu = () => {
   const [selectedCategory, setSelectedCategory] = useState(Object.keys(menuCategories)[0]);
+  const categoryRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
   return (
