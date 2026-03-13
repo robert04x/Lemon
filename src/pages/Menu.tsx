@@ -1602,9 +1602,15 @@ const Menu = () => {
   const menuItemsRef = useRef<HTMLDivElement>(null);
 
   const handleCategoryClick = (category: string) => {
-    setSelectedCategory(category);
-    if (viewMode === 'grid' && menuItemsRef.current) {
-      menuItemsRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (viewMode === 'list') {
+      // In list view, toggle the dropdown
+      setSelectedCategory(selectedCategory === category ? '' : category);
+    } else {
+      // In grid view, select and scroll
+      setSelectedCategory(category);
+      if (menuItemsRef.current) {
+        menuItemsRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
   };
 
