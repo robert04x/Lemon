@@ -1670,38 +1670,37 @@ const Menu = () => {
           ) : (
             /* List view - Dropdown for each category */
             <div className="space-y-2">
-              {Object.keys(menuCategories).map((category) => (
-                <details
-                  key={category}
-                  className="group bg-white rounded-lg shadow-sm overflow-hidden"
-                  open={selectedCategory === category}
-                >
-                  <summary
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setSelectedCategory(category);
-                    }}
-                    className={`w-full p-3 text-sm font-medium cursor-pointer list-none flex justify-between items-center transition-all ${
-                      selectedCategory === category
-                        ? 'bg-yellow-400 text-white'
-                        : 'bg-white text-gray-700 hover:bg-yellow-50'
-                    }`}
+              {Object.keys(menuCategories).map((category) => {
+                const isOpen = selectedCategory === category;
+                return (
+                  <div
+                    key={category}
+                    className="bg-white rounded-lg shadow-sm overflow-hidden"
                   >
-                    <span>{category}</span>
-                    <div className="flex items-center gap-2">
-                      <span className="text-xs opacity-75">
-                        {menuCategories[category as keyof typeof menuCategories].length}
-                      </span>
-                      <ChevronDown
-                        size={16}
-                        className={`transition-transform ${
-                          selectedCategory === category ? 'rotate-180' : ''
-                        }`}
-                      />
-                    </div>
-                  </summary>
-                </details>
-              ))}
+                    <button
+                      onClick={() => setSelectedCategory(category)}
+                      className={`w-full p-3 text-sm font-medium cursor-pointer flex justify-between items-center transition-all ${
+                        isOpen
+                          ? 'bg-yellow-400 text-white'
+                          : 'bg-white text-gray-700 hover:bg-yellow-50'
+                      }`}
+                    >
+                      <span>{category}</span>
+                      <div className="flex items-center gap-2">
+                        <span className="text-xs opacity-75">
+                          {menuCategories[category as keyof typeof menuCategories].length}
+                        </span>
+                        <ChevronDown
+                          size={16}
+                          className={`transition-transform ${
+                            isOpen ? 'rotate-180' : ''
+                          }`}
+                        />
+                      </div>
+                    </button>
+                  </div>
+                );
+              })}
             </div>
           )}
         </div>
