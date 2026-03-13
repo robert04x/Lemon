@@ -153,7 +153,7 @@ const menuCategories = {
     }
   ],
 
-  'Ciorbe / Soups': [
+  'Ciorbe': [
     { 
       ro: 'Ciorbă de burtă vită', 
       en: '350 ml.',
@@ -193,7 +193,7 @@ const menuCategories = {
 
   ],
 
-  'Paste / Pasta': [
+  'Paste': [
     {
       ro: 'Paste a la Lemon',
       en: '350 gr.',
@@ -260,7 +260,7 @@ const menuCategories = {
     }
   ],
 
-  'Fel principal / Main Course': [
+  'Fel principal': [
     {
       ro: 'Pastramă de oaie la ceaun cu mămăligă',
       en: '350 gr.',
@@ -515,7 +515,7 @@ const menuCategories = {
     },
 
   ],
-  'Burgeri / Burgers': [
+  'Burgeri': [
     {
       ro: 'Burger Lemon',
       en: '630 gr.',
@@ -623,7 +623,7 @@ const menuCategories = {
     }
   ],
 
-    'Garnituri / Side Dishes': [
+    'Garnituri': [
     {
       ro: 'Cartofi prăjiți',
       en: '150 gr.',
@@ -749,7 +749,7 @@ const menuCategories = {
     }
 ],
 
-  'Deserturi / Desserts': [
+  'Deserturi': [
     {
       ro: 'Tort Tiramisu',
       en: '200 gr.',
