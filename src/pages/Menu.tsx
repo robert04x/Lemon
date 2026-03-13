@@ -1537,7 +1537,7 @@ const menuCategories = {
   ]
 };
 
-const MenuItem = ({ item, index }: { item: { ro: string; en: string; ingredients: string; price: string }; index: number }) => {
+const MenuItem = ({ item, index }: { item: { ro: string; en: string; ingredients?: string }; index: number }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -1545,32 +1545,25 @@ const MenuItem = ({ item, index }: { item: { ro: string; en: string; ingredients
       initial={{ opacity: 0, x: '-50vw' }}
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: '50vw' }}
-      transition={{ duration: 0.2, delay: index * 0.02 }}
-      className="menu-card p-2 rounded-lg mb-2 transform w-full"
+      transition={{ duration: 0.2, delay: index * 0.03 }}
+      className="menu-card p-3 rounded-xl mb-3 transform w-full max-w-2xl mx-auto"
     >
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="relative overflow-hidden rounded-lg bg-white bg-opacity-95 p-3 w-full text-left transition-all hover:bg-opacity-100 hover:shadow-md"
+        className="relative overflow-hidden rounded-lg bg-white bg-opacity-90 p-4 w-full text-left transition-colors hover:bg-opacity-100"
       >
         <div className="flex justify-between items-start">
-          <div className="flex-1 min-w-0">
-            <div className="flex justify-between items-start mb-1">
-              <h3 className="text-base font-semibold text-gray-800 leading-tight pr-2">{item.ro}</h3>
-              {item.price && (
-                <span className="text-base font-bold text-yellow-600 flex-shrink-0">{item.price}</span>
-              )}
-            </div>
-            <p className="text-xs text-gray-600 italic leading-tight">{item.en}</p>
+          <div>
+            <h3 className="text-lg font-semibold text-gray-800">{item.ro}</h3>
+            <p className="text-sm text-gray-600 italic">{item.en}</p>
           </div>
-          {item.ingredients && (
-            <motion.div
-              animate={{ rotate: isOpen ? 180 : 0 }}
-              transition={{ duration: 0.2 }}
-              className="text-yellow-500 ml-2 flex-shrink-0"
-            >
-              <ChevronDown size={16} />
-            </motion.div>
-          )}
+          <motion.div
+            animate={{ rotate: isOpen ? 180 : 0 }}
+            transition={{ duration: 0.2 }}
+            className="text-yellow-500"
+          >
+            <ChevronDown size={20} />
+          </motion.div>
         </div>
         
         <AnimatePresence>
@@ -1582,8 +1575,8 @@ const MenuItem = ({ item, index }: { item: { ro: string; en: string; ingredients
               transition={{ duration: 0.2 }}
               className="overflow-hidden"
             >
-              <div className="pt-2 mt-2 border-t border-gray-100">
-                <p className="text-xs text-gray-600 leading-relaxed">
+              <div className="pt-4 mt-4 border-t border-gray-100">
+                <p className="text-sm text-gray-600 leading-relaxed">
                   {item.ingredients}
                 </p>
               </div>
@@ -1591,7 +1584,7 @@ const MenuItem = ({ item, index }: { item: { ro: string; en: string; ingredients
           )}
         </AnimatePresence>
         
-        <div className="h-0.5 w-8 bg-yellow-400 rounded-full mt-2" />
+        <div className="h-0.5 w-12 bg-yellow-400 rounded-full mt-2" />
       </button>
     </motion.div>
   );
