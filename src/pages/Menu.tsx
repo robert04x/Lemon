@@ -1599,7 +1599,6 @@ const MenuItem = ({ item, index }: { item: { ro: string; en: string; ingredients
 
 const Menu = () => {
   const [selectedCategory, setSelectedCategory] = useState(Object.keys(menuCategories)[0]);
-  const contentRef = useRef<HTMLDivElement | null>(null);
 
   return (
     <div className="min-h-screen pt-20 px-4 pb-16">
@@ -1615,30 +1614,28 @@ const Menu = () => {
         </motion.div>
         
         <div className="flex flex-wrap gap-4 justify-center mb-12">
-          {Object.keys(menuCategories).map((category) => (
-            <button
-              key={category}
-              onClick={() => {
-                setSelectedCategory(category);
-                
-                // Scroll to the content area
-                contentRef.current?.scrollIntoView({
-                  behavior: "smooth",
-                  block: "start"
-                });
-              }}
-              className={`px-6 py-2 rounded-full transition-all duration-200 ${
-                selectedCategory === category
-                  ? "bg-yellow-400 text-white shadow-lg"
-                  : "bg-white text-gray-700 hover:bg-yellow-50 shadow"
-              }`}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
-        
-        <div ref={contentRef} className="relative mb-20 scroll-mt-24">
+  {Object.keys(menuCategories).map((category) => (
+    <button
+      key={category}
+      onClick={() => {
+        setSelectedCategory(category);
+
+        categoryRefs.current[category]?.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }}
+      className={`px-6 py-2 rounded-full transition-all duration-200 ${
+        selectedCategory === category
+          ? "bg-yellow-400 text-white shadow-lg"
+          : "bg-white text-gray-700 hover:bg-yellow-50 shadow"
+      }`}
+    >
+      {category}
+    </button>
+  ))}
+</div>
+        <div className="relative mb-20">
           <AnimatePresence mode="wait">
             <motion.div 
               key={selectedCategory}
