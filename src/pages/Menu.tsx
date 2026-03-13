@@ -1538,7 +1538,7 @@ const menuCategories = {
 
 const MenuItem = ({ item, index }: { item: { ro: string; en: string; ingredients: string; price: string }; index: number }) => {
   const [isOpen, setIsOpen] = useState(false);
-
+ 
   return (
     <motion.div
       initial={{ opacity: 0, x: '-50vw' }}
@@ -1595,12 +1595,12 @@ const MenuItem = ({ item, index }: { item: { ro: string; en: string; ingredients
     </motion.div>
   );
 };
-
+ 
 const Menu = () => {
   const [selectedCategory, setSelectedCategory] = useState(Object.keys(menuCategories)[0]);
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const menuItemsRef = useRef<HTMLDivElement>(null);
-
+ 
   const handleCategoryClick = (category: string) => {
     if (viewMode === 'list') {
       // In list view, toggle the dropdown
@@ -1613,7 +1613,7 @@ const Menu = () => {
       }
     }
   };
-
+ 
   return (
     <div className="min-h-screen pt-16 px-2 pb-16 sm:px-4">
       <div className="max-w-6xl mx-auto">
@@ -1681,7 +1681,7 @@ const Menu = () => {
                 return (
                   <div key={category} className="bg-white rounded-lg shadow-sm overflow-hidden">
                     <button
-                      onClick={() => setSelectedCategory(category)}
+                      onClick={() => handleCategoryClick(category)}
                       className={`w-full p-3 text-sm font-medium transition-all duration-200 text-left flex justify-between items-center ${
                         isOpen
                           ? 'bg-yellow-400 text-white shadow-lg'
@@ -1727,9 +1727,9 @@ const Menu = () => {
             </div>
           )}
         </div>
-
+ 
         {/* Menu items - only shown in grid view */}
-        {viewMode === 'grid' && (
+        {viewMode === 'grid' && selectedCategory && (
           <div className="relative" ref={menuItemsRef}>
             <div className="mb-4 p-3 bg-yellow-50 rounded-lg border-l-4 border-yellow-400">
               <h3 className="font-semibold text-gray-800 mb-1">{selectedCategory}</h3>
@@ -1765,5 +1765,5 @@ const Menu = () => {
     </div>
   );
 }
-
+ 
 export default Menu;
