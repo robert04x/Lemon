@@ -1599,14 +1599,6 @@ const MenuItem = ({ item, index }: { item: { ro: string; en: string; ingredients
 const Menu = () => {
   const [selectedCategory, setSelectedCategory] = useState(Object.keys(menuCategories)[0]);
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const menuItemsRef = useRef<HTMLDivElement>(null);
-
-  const handleCategoryClick = (category: string) => {
-    setSelectedCategory(category);
-    if (viewMode === 'grid' && menuItemsRef.current) {
-      menuItemsRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
 
   return (
     <div className="min-h-screen pt-16 px-2 pb-16 sm:px-4">
@@ -1651,7 +1643,7 @@ const Menu = () => {
               {Object.keys(menuCategories).map((category) => (
                 <button
                   key={category}
-                  onClick={() => handleCategoryClick(category)}
+                  onClick={() => setSelectedCategory(category)}
                   className={`p-3 rounded-lg text-sm font-medium transition-all duration-200 text-left ${
                     selectedCategory === category
                       ? 'bg-yellow-400 text-white shadow-lg scale-105'
@@ -1668,40 +1660,30 @@ const Menu = () => {
               ))}
             </div>
           ) : (
-            /* List view for categories - each category is a dropdown */
+            /* List view for categories */
             <div className="space-y-1">
-              {Object.keys(menuCategories).map((category) => {
-                const isSelected = selectedCategory === category;
-                return (
-                  <div key={category} className="bg-white rounded-lg shadow-sm overflow-hidden">
-                    <button
-                      onClick={() => setSelectedCategory(category)}
-                      className={`w-full p-3 rounded-lg text-sm font-medium transition-all duration-200 text-left flex justify-between items-center ${
-                        isSelected
-                          ? 'bg-yellow-400 text-white shadow-lg'
-                          : 'bg-white text-gray-700 hover:bg-yellow-50 shadow-sm'
-                      }`}
-                    >
-                      <span>{category}</span>
-                      <div className="flex items-center gap-2">
-                        <span className="text-xs opacity-75">
-                          {menuCategories[category as keyof typeof menuCategories].length}
-                        </span>
-                        <ChevronDown 
-                          size={16}
-                          className={`transition-transform ${isSelected ? 'rotate-180' : ''}`}
-                        />
-                      </div>
-                    </button>
-                  </div>
-                );
-              })}
+              {Object.keys(menuCategories).map((category) => (
+                <button
+                  key={category}
+                  onClick={() => setSelectedCategory(category)}
+                  className={`w-full p-3 rounded-lg text-sm font-medium transition-all duration-200 text-left flex justify-between items-center ${
+                    selectedCategory === category
+                      ? 'bg-yellow-400 text-white shadow-lg'
+                      : 'bg-white text-gray-700 hover:bg-yellow-50 shadow-sm'
+                  }`}
+                >
+                  <span>{category}</span>
+                  <span className="text-xs opacity-75">
+                    {menuCategories[category as keyof typeof menuCategories].length}
+                  </span>
+                </button>
+              ))}
             </div>
           )}
         </div>
 
         {/* Menu items */}
-        <div className="relative" ref={menuItemsRef}>
+        <div className="relative">
           <div className="mb-4 p-3 bg-yellow-50 rounded-lg border-l-4 border-yellow-400">
             <h3 className="font-semibold text-gray-800 mb-1">{selectedCategory}</h3>
             <p className="text-sm text-gray-600">
@@ -1737,3 +1719,4 @@ const Menu = () => {
 }
 
 export default Menu;
+
