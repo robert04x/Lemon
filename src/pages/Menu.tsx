@@ -1334,7 +1334,7 @@ const menuCategories = {
       price: '90 Lei'
     }
   ],
-  'Bere / Beer': [
+  'Bere': [
     {
       ro: 'Staropramen',
       en: 'Staropramen',
@@ -1428,7 +1428,7 @@ const menuCategories = {
       price: '7 Lei / 11 Lei'
     }
   ],
-  'Cafea / Coffee': [
+  'Cafea': [
     {
       ro: 'Espresso',
       en: 'Espresso',
@@ -1466,7 +1466,7 @@ const menuCategories = {
       price: '14 Lei'
     }
   ],
-  'Ceai / Tea': [
+  'Ceai': [
     {
       ro: 'Ceai Julius Meinl cu Mentă',
       en: 'Julius Meinl Mint Tea',
