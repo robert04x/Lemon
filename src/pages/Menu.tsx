@@ -1614,56 +1614,54 @@ const Menu = () => {
           <p className="text-xl text-gray-600 font-serif italic">Dacă papilele tale gustative ar putea dansa, aici ar face-o</p>
         </motion.div>
         
-        {/* Category Buttons - Sticky Navigation */}
-        <div className="sticky top-20 z-10 bg-white/80 backdrop-blur-sm py-4 -mx-4 px-4 mb-8">
-          <div className="flex flex-wrap gap-4 justify-center">
-            {Object.keys(menuCategories).map((category) => (
-              <button
-                key={category}
-                onClick={() => {
-                  setSelectedCategory(category);
+        <div className="flex flex-wrap gap-4 justify-center mb-12">
+          {Object.keys(menuCategories).map((category) => (
+            <button
+              key={category}
+              onClick={() => {
+                setSelectedCategory(category);
+                
+                // Small delay to allow state update and DOM render
+                setTimeout(() => {
                   categoryRefs.current[category]?.scrollIntoView({
                     behavior: "smooth",
-                    block: "start",
-                    inline: "nearest"
+                    block: "start"
                   });
-                }}
-                className={`px-6 py-2 rounded-full transition-all duration-200 ${
-                  selectedCategory === category
-                    ? "bg-yellow-400 text-white shadow-lg"
-                    : "bg-white text-gray-700 hover:bg-yellow-50 shadow"
-                }`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* Menu Categories */}
-        <div className="space-y-16">
-          {Object.keys(menuCategories).map((category) => (
-            <div
-              key={category}
-              ref={(el) => {
-                categoryRefs.current[category] = el;
+                }, 100);
               }}
-              className="scroll-mt-32"
+              className={`px-6 py-2 rounded-full transition-all duration-200 ${
+                selectedCategory === category
+                  ? "bg-yellow-400 text-white shadow-lg"
+                  : "bg-white text-gray-700 hover:bg-yellow-50 shadow"
+              }`}
             >
-              <h2 className="text-3xl font-serif font-bold text-gray-900 mb-8 pb-2 border-b-2 border-yellow-400">
-                {category}
-              </h2>
-              <div className="space-y-2">
-                {menuCategories[category as keyof typeof menuCategories].map((item, index) => (
-                  <MenuItem 
-                    key={item.ro} 
-                    item={item} 
-                    index={index}
-                  />
-                ))}
-              </div>
-            </div>
+              {category}
+            </button>
           ))}
+        </div>
+        
+        <div className="relative mb-20">
+          <AnimatePresence mode="wait">
+            <motion.div 
+              key={selectedCategory}
+              ref={(el) => {
+                categoryRefs.current[selectedCategory] = el;
+              }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="space-y-2"
+            >
+              {menuCategories[selectedCategory as keyof typeof menuCategories].map((item, index) => (
+                <MenuItem 
+                  key={item.ro} 
+                  item={item} 
+                  index={index}
+                />
+              ))}
+            </motion.div>
+          </AnimatePresence>
         </div>
       </div>
       
