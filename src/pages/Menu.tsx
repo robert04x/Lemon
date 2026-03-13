@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, Grid3X3, List } from 'lucide-react';
-import { useRef } from 'react';
 
 // Negăsite aici :
 // Risotto cu ciuperci, Mushroom Risotto, orez arborio 250g, mix ciuperci 100g, cremă cuccina, parmezan, pastă trufe, usturoi, 35 lei
