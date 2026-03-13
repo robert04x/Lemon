@@ -1643,7 +1643,11 @@ const Menu = () => {
               {Object.keys(menuCategories).map((category) => (
                 <button
                   key={category}
-                  onClick={() => setSelectedCategory(category)}
+                  onClick={() => setSelectedCategory(category);
+                          categoryRefs.current[category]?.scrollIntoView({
+                          behavior: "smooth",
+                          block: "start"
+                      });}
                   className={`p-3 rounded-lg text-sm font-medium transition-all duration-200 text-left ${
                     selectedCategory === category
                       ? 'bg-yellow-400 text-white shadow-lg scale-105'
