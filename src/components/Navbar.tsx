@@ -27,7 +27,7 @@ const Navbar = () => {
           <div className="flex space-x-8">
             {[
               { path: '/', label: 'Acasa' },
-              { path: '/gallery', label: 'Galerie' }
+              { path: '/gallery', label: 'Galerie' },
               { path: '/menu', label: 'Meniu' }
             ].map((item) => (
               <Link
