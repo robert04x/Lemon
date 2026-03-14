@@ -185,7 +185,7 @@ const Gallery = () => {
       <div className="relative z-10">
 
         {/* ── PAGE TITLE ── */}
-        <div className="text-center pt-12 pb-6 px-4">
+        <div className="text-center pt-18 pb-6 px-4">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
