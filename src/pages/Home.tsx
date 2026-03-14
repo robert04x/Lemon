@@ -9,18 +9,18 @@ import logo from '/src/Lemon Logo - Final.png';
 // PHOTO DATA — replace src with your real images
 // ─────────────────────────────────────────────
 const photos = [
-  { id: 1,  src: '/gallery/1.jpg',  title: 'Somon la grătar',         category: 'Feluri principale' },
-  { id: 2,  src: '/gallery/2.jpg',  title: 'Tiramisu',                category: 'Deserturi'         },
-  { id: 3,  src: '/gallery/3.jpg',  title: 'Bruschette cu roșii',     category: 'Aperitive'         },
-  { id: 4,  src: '/gallery/4.jpg',  title: 'Friptură de vită',        category: 'Feluri principale' },
-  { id: 5,  src: '/gallery/5.jpg',  title: 'Cheesecake cu lămâie',    category: 'Deserturi'         },
-  { id: 6,  src: '/gallery/6.jpg',  title: 'Carpaccio de vită',       category: 'Aperitive'         },
-  { id: 7,  src: '/gallery/7.jpg',  title: 'Paste carbonara',         category: 'Feluri principale' },
-  { id: 8,  src: '/gallery/8.jpg',  title: 'Panna cotta',             category: 'Deserturi'         },
-  { id: 9,  src: '/gallery/9.jpg',  title: 'Tartă cu fructe',         category: 'Deserturi'         },
-  { id: 10, src: '/gallery/10.jpg', title: 'Supă cremă de dovleac',   category: 'Aperitive'         },
-  { id: 11, src: '/gallery/11.jpg', title: 'Pui la cuptor',           category: 'Feluri principale' },
-  { id: 12, src: '/gallery/12.jpg', title: 'Salată Caesar',           category: 'Aperitive'         },
+  { id: 1,  src: './gallery/1.jpg',  title: 'Somon la grătar',         category: 'Feluri principale' },
+  { id: 2,  src: './gallery/2.jpg',  title: 'Tiramisu',                category: 'Deserturi'         },
+  { id: 3,  src: './gallery/3.jpg',  title: 'Bruschette cu roșii',     category: 'Aperitive'         },
+  { id: 4,  src: './gallery/4.jpg',  title: 'Friptură de vită',        category: 'Feluri principale' },
+  { id: 5,  src: './gallery/5.jpg',  title: 'Cheesecake cu lămâie',    category: 'Deserturi'         },
+  { id: 6,  src: './gallery/6.jpg',  title: 'Carpaccio de vită',       category: 'Aperitive'         },
+  { id: 7,  src: './gallery/7.jpg',  title: 'Paste carbonara',         category: 'Feluri principale' },
+  { id: 8,  src: './gallery/8.jpg',  title: 'Panna cotta',             category: 'Deserturi'         },
+  { id: 9,  src: './gallery/9.jpg',  title: 'Tartă cu fructe',         category: 'Deserturi'         },
+  { id: 10, src: './gallery/10.jpg', title: 'Supă cremă de dovleac',   category: 'Aperitive'         },
+  { id: 11, src: './gallery/11.jpg', title: 'Pui la cuptor',           category: 'Feluri principale' },
+  { id: 12, src: './gallery/12.jpg', title: 'Salată Caesar',           category: 'Aperitive'         },
 ];
 
 const CATEGORIES = ['Toate', 'Aperitive', 'Feluri principale', 'Deserturi'];
