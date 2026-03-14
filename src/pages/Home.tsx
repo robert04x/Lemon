@@ -9,18 +9,18 @@ import logo from '/src/Lemon Logo - Final.png';
 // PHOTO DATA — replace src with your real images
 // ─────────────────────────────────────────────
 const photos = [
-  { id: 1,  src: '/gallery/dish1.jpg',  title: 'Somon la grătar',        category: 'Feluri principale' },
-  { id: 2,  src: '/gallery/dish2.jpg',  title: 'Tiramisu',                category: 'Deserturi'         },
-  { id: 3,  src: '/gallery/dish3.jpg',  title: 'Bruschette cu roșii',     category: 'Aperitive'         },
-  { id: 4,  src: '/gallery/dish4.jpg',  title: 'Friptură de vită',        category: 'Feluri principale' },
-  { id: 5,  src: '/gallery/dish5.jpg',  title: 'Cheesecake cu lămâie',    category: 'Deserturi'         },
-  { id: 6,  src: '/gallery/dish6.jpg',  title: 'Carpaccio de vită',       category: 'Aperitive'         },
-  { id: 7,  src: '/gallery/dish7.jpg',  title: 'Paste carbonara',         category: 'Feluri principale' },
-  { id: 8,  src: '/gallery/dish8.jpg',  title: 'Panna cotta',             category: 'Deserturi'         },
-  { id: 9,  src: '/gallery/dish9.jpg',  title: 'Tartă cu fructe',         category: 'Deserturi'         },
-  { id: 10, src: '/gallery/dish10.jpg', title: 'Supă cremă de dovleac',   category: 'Aperitive'         },
-  { id: 11, src: '/gallery/dish11.jpg', title: 'Pui la cuptor',           category: 'Feluri principale' },
-  { id: 12, src: '/gallery/dish12.jpg', title: 'Salată Caesar',           category: 'Aperitive'         },
+  { id: 1,  src: '/gallery/1.jpg',  title: 'Somon la grătar',         category: 'Feluri principale' },
+  { id: 2,  src: '/gallery/2.jpg',  title: 'Tiramisu',                category: 'Deserturi'         },
+  { id: 3,  src: '/gallery/3.jpg',  title: 'Bruschette cu roșii',     category: 'Aperitive'         },
+  { id: 4,  src: '/gallery/4.jpg',  title: 'Friptură de vită',        category: 'Feluri principale' },
+  { id: 5,  src: '/gallery/5.jpg',  title: 'Cheesecake cu lămâie',    category: 'Deserturi'         },
+  { id: 6,  src: '/gallery/6.jpg',  title: 'Carpaccio de vită',       category: 'Aperitive'         },
+  { id: 7,  src: '/gallery/7.jpg',  title: 'Paste carbonara',         category: 'Feluri principale' },
+  { id: 8,  src: '/gallery/8.jpg',  title: 'Panna cotta',             category: 'Deserturi'         },
+  { id: 9,  src: '/gallery/9.jpg',  title: 'Tartă cu fructe',         category: 'Deserturi'         },
+  { id: 10, src: '/gallery/10.jpg', title: 'Supă cremă de dovleac',   category: 'Aperitive'         },
+  { id: 11, src: '/gallery/11.jpg', title: 'Pui la cuptor',           category: 'Feluri principale' },
+  { id: 12, src: '/gallery/12.jpg', title: 'Salată Caesar',           category: 'Aperitive'         },
 ];
 
 const CATEGORIES = ['Toate', 'Aperitive', 'Feluri principale', 'Deserturi'];
@@ -183,43 +183,6 @@ const Gallery = () => {
       </div>
 
       <div className="relative z-10">
-
-        {/* ── HEADER ── */}
-        <motion.header
-          initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="sticky top-0 z-40 bg-white bg-opacity-80 backdrop-blur-md shadow-sm"
-        >
-          <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-            {/* Back */}
-            <Link
-              to="/"
-              className="flex items-center gap-2 text-yellow-600 hover:text-yellow-500 transition-colors font-semibold text-sm"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Acasă
-            </Link>
-
-            {/* Logo */}
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-yellow-400 flex items-center justify-center shadow">
-                <img src={logo} className="w-6 h-6 object-contain" alt="Lemon Logo" />
-              </div>
-              <span className="font-serif font-bold text-xl bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-400">
-                LEMON
-              </span>
-            </div>
-
-            {/* Menu link */}
-            <Link
-              to="/menu"
-              className="text-sm font-semibold text-white bg-gradient-to-r from-yellow-400 to-yellow-500 px-4 py-1.5 rounded-full hover:from-yellow-500 hover:to-yellow-600 transition-all shadow"
-            >
-              Meniu
-            </Link>
-          </div>
-        </motion.header>
 
         {/* ── PAGE TITLE ── */}
         <div className="text-center pt-12 pb-6 px-4">
