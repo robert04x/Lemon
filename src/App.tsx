@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
+import Gallery from './pages/Gallery';
 import Menu from './pages/Menu';
 import { Diamond as Lemon } from 'lucide-react';
 
